@@ -1,12 +1,13 @@
 import React from "react";
 import "../style.scss";
 import Add from "../img/addAvatar.png";
+import Logo from "../img/logo1.png";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth, db, storage } from "../firebase";
 import { useState } from "react";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { doc, setDoc } from "firebase/firestore";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 export default function Register() {
   const [err, setErr] = useState(false);
@@ -15,7 +16,8 @@ export default function Register() {
   const handleSubmit = async (e) => {
     // stop the refresh
     e.preventDefault();
-    const userName = e.target[0].value;
+
+    const displayName = e.target[0].value;
     const email = e.target[1].value;
     const password = e.target[2].value;
     const photoFile = e.target[3].files[0];
@@ -23,7 +25,7 @@ export default function Register() {
     try {
       const res = await createUserWithEmailAndPassword(auth, email, password);
 
-      const storageRef = ref(storage, userName);
+      const storageRef = ref(storage, displayName);
 
       const uploadTask = uploadBytesResumable(storageRef, photoFile);
 
@@ -34,12 +36,12 @@ export default function Register() {
         () => {
           getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
             await updateProfile(res.user, {
-              userName,
+              displayName,
               photoURL: downloadURL,
             });
             await setDoc(doc(db, "users", res.user.uid), {
               uid: res.user.uid,
-              userName,
+              displayName,
               email,
               photoURL: downloadURL,
             });
@@ -58,7 +60,12 @@ export default function Register() {
   return (
     <div className="formContainer">
       <div className="formWrapper">
-        <span className="logo">Chat Website</span>
+        <button className="theme">
+          <i className="fa-solid fa-moon"></i>
+        </button>
+        <span className="logo">
+          Hii Chat <img src={Logo} alt="" />
+        </span>
         <span className="title">Register</span>
         <form onSubmit={handleSubmit}>
           <input type="text" placeholder="Username" />
@@ -72,7 +79,9 @@ export default function Register() {
           <button>Sign Up</button>
           {err && <span>Something went wrong</span>}
         </form>
-        <p>You do have an account ? Login</p>
+        <p>
+          You do have an account ? <Link to="/login">Login</Link>
+        </p>
       </div>
     </div>
   );
