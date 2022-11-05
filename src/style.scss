@@ -14,11 +14,17 @@
   }
 }
 
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
 .formContainer {
   background: linear-gradient(
     90deg,
-    rgb(121, 69, 167) 40%,
-    rgb(98, 63, 252) 100%
+    rgb(5, 102, 141) 20%,
+    rgb(2, 128, 144) 40%,
+    rgb(0, 168, 150) 60%,
+    rgb(2, 195, 154) 100%
   );
   height: 100vh;
   display: flex;
@@ -34,10 +40,28 @@
     gap: 10px;
     align-items: center;
 
+    .theme {
+      margin-left: 250px;
+      border-radius: 10px;
+      width: 35px;
+      height: 30px;
+      border: 2px solid #a7bcff;
+      cursor: pointer;
+
+      .fa-solid {
+        color: #5a189a;
+        font-size: 18px;
+      }
+    }
+
     .logo {
       color: #5d5b8d;
       font-weight: bold;
-      font-size: 24px;
+      font-size: 34px;
+
+      img {
+        width: 50px;
+      }
     }
 
     .title {
@@ -52,20 +76,21 @@
 
       input {
         padding: 15px;
+        border-radius: 30px;
         border: none;
         width: 250px;
-        border-bottom: 1px solid #a7bcff;
+        border: 1px solid #a7bcff;
         &::placeholder {
           color: rgb(175, 175, 175);
         }
       }
       button {
-        background-color: #7b96ec;
+        background-color: #09bc8a;
         color: white;
         padding: 10px;
         font-weight: bold;
         border: none;
-        border-radius: 5px;
+        border-radius: 30px;
         cursor: pointer;
       }
 
@@ -93,8 +118,10 @@
 .home {
   background: linear-gradient(
     90deg,
-    rgb(247, 241, 227) 30%,
-    rgb(71, 71, 135) 100%
+    rgb(5, 102, 141) 20%,
+    rgb(2, 128, 144) 40%,
+    rgb(0, 168, 150) 60%,
+    rgb(2, 195, 154) 100%
   );
   height: 100vh;
   display: flex;
@@ -115,13 +142,13 @@
 
   .sidebar {
     flex: 1;
-    background-color: #3e3c61;
+    background-color: #52796f;
     position: relative;
 
     .navbar {
       display: flex;
       align-items: center;
-      background-color: #2f2d52;
+      background-color: #354f52;
       height: 50px;
       padding: 10px;
       justify-content: space-between;
