@@ -148,6 +148,7 @@
   .container {
     border: 1px solid none;
     border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     width: 65%;
     height: 80%;
     display: flex;
@@ -159,13 +160,13 @@
 
   .sidebar {
     flex: 1;
-    background-color: #52796f;
+    background-color: #f0efeb;
     position: relative;
 
     .navbar {
       display: flex;
       align-items: center;
-      background-color: #354f52;
+      background-color: #4b4453;
       height: 50px;
       padding: 10px;
       justify-content: space-between;
@@ -190,7 +191,7 @@
         object-fit: cover;
       }
       button {
-        background-color: #5d5b8d;
+        background-color: #82807c;
         color: #ddddf7;
         font-size: 10px;
         border: none;
@@ -212,11 +213,11 @@
         input {
           background-color: transparent;
           border: none;
-          color: white;
+          color: black;
           outline: none;
 
           &::placeholder {
-            color: lightgray;
+            color: gray;
           }
         }
       }
@@ -226,11 +227,12 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      color: white;
+      color: black;
       cursor: pointer;
 
       &:hover {
-        background-color: #2f2d52;
+        background-color: #dad7cd;
+        border-radius: 5px;
       }
 
       img {
@@ -247,7 +249,7 @@
         }
         p {
           font-size: 14px;
-          color: lightgray;
+          color: rgb(116, 116, 116);
         }
       }
     }
@@ -258,7 +260,7 @@
 
     .chatInfo {
       height: 50px;
-      background-color: #5d5b8d;
+      background-color: #5e5568;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -277,7 +279,7 @@
     }
 
     .messages {
-      background-color: #ddddf7;
+      background-color: #e8e8dc;
       padding: 10px;
       height: calc(100% - 160px);
       overflow: auto;
@@ -326,7 +328,7 @@
             align-items: flex-end;
 
             p {
-              background-color: #8da4f1;
+              background-color: #857695;
               color: white;
               border-radius: 10px 0px 10px 10px;
             }
@@ -369,8 +371,8 @@
           border: none;
           padding: 10px 15px;
           color: white;
-          background-color: #8da4f1;
-          border-radius: 5px;
+          background-color: #5e5568;
+          border-radius: 10px;
           cursor: pointer;
         }
       }
