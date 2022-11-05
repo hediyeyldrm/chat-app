@@ -39,6 +39,22 @@
     flex-direction: column;
     gap: 10px;
     align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    // box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px;
+
+    .nopageButton {
+      background-color: #c5dce5;
+      color: white;
+      padding: 10px;
+      font-weight: bold;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+
+    .nopageImg {
+      width: 500px;
+    }
 
     .theme {
       margin-left: 250px;
@@ -56,6 +72,7 @@
 
     .logo {
       color: #5d5b8d;
+      text-shadow: 2px 2px 4px #939090;
       font-weight: bold;
       font-size: 34px;
 
