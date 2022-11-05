@@ -5,7 +5,7 @@ export default function NoPage() {
   return (
     <div className="formContainer">
       <div className="formWrapper">
-        <img
+        <img className="nopageImg"
           src="https://www.myphukettravel.com/assets/front-end/images/404.gif"
           alt="404"
         />
