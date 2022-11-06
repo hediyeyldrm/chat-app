@@ -8,10 +8,13 @@ import { useState } from "react";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { doc, setDoc } from "firebase/firestore";
 import { useNavigate, Link } from "react-router-dom";
+import { useContext } from "react";
+import { themeContext } from "../context/ThemeContext";
 
 export default function Register() {
   const [err, setErr] = useState(false);
   const navigate = useNavigate();
+  const { toggleTheme, theme } = useContext(themeContext);
 
   const handleSubmit = async (e) => {
     // stop the refresh
@@ -58,9 +61,9 @@ export default function Register() {
   };
 
   return (
-    <div className="formContainer">
+    <div className={`formContainer ${theme}`}>
       <div className="formWrapper">
-        <button className="theme">
+        <button className="theme" onClick={toggleTheme}>
           <i className="fa-solid fa-moon"></i>
         </button>
         <span className="logo">

@@ -4,10 +4,13 @@ import Logo from "../img/logo1.png";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import "../style.scss";
 import { auth } from "../firebase";
+import { useContext } from "react";
+import { themeContext } from "../context/ThemeContext";
 
 export default function Login() {
   const [err, setErr] = useState(false);
   const navigate = useNavigate();
+  const { toggleTheme, theme } = useContext(themeContext);
 
   const handleSubmit = async (e) => {
     // stop the refresh
@@ -24,9 +27,9 @@ export default function Login() {
     }
   };
   return (
-    <div className="formContainer">
+    <div className={`formContainer ${theme}`}>
       <div className="formWrapper">
-        <button className="theme">
+        <button className="theme" onClick={toggleTheme}>
           <i className="fa-solid fa-moon"></i>
         </button>
         <span className="logo">
