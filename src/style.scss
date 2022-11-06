@@ -18,7 +18,7 @@
   font-family: "Montserrat", sans-serif;
 }
 
-.formContainer {
+.dark {
   background: linear-gradient(
     90deg,
     rgb(5, 102, 141) 20%,
@@ -26,6 +26,25 @@
     rgb(0, 168, 150) 60%,
     rgb(2, 195, 154) 100%
   );
+}
+
+.light {
+  background: #12c2e9; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f64f59,
+    #c471ed,
+    #12c2e9
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f64f59,
+    #c471ed,
+    #12c2e9
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.formContainer {
   height: 100vh;
   display: flex;
   align-items: center;
