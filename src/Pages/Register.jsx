@@ -10,11 +10,12 @@ import { doc, setDoc } from "firebase/firestore";
 import { useNavigate, Link } from "react-router-dom";
 import { useContext } from "react";
 import { themeContext } from "../context/ThemeContext";
+import Button from "../Components/Button";
 
 export default function Register() {
   const [err, setErr] = useState(false);
   const navigate = useNavigate();
-  const { toggleTheme, theme } = useContext(themeContext);
+  const { theme } = useContext(themeContext);
 
   const handleSubmit = async (e) => {
     // stop the refresh
@@ -63,9 +64,7 @@ export default function Register() {
   return (
     <div className={`formContainer ${theme}`}>
       <div className="formWrapper">
-        <button className="theme" onClick={toggleTheme}>
-          <i className="fa-solid fa-moon"></i>
-        </button>
+        <Button />
         <span className="logo">
           Hii Chat <img src={Logo} alt="" />
         </span>

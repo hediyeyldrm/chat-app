@@ -6,11 +6,12 @@ import "../style.scss";
 import { auth } from "../firebase";
 import { useContext } from "react";
 import { themeContext } from "../context/ThemeContext";
+import Button from "../Components/Button";
 
 export default function Login() {
   const [err, setErr] = useState(false);
   const navigate = useNavigate();
-  const { toggleTheme, theme } = useContext(themeContext);
+  const { theme } = useContext(themeContext);
 
   const handleSubmit = async (e) => {
     // stop the refresh
@@ -29,9 +30,7 @@ export default function Login() {
   return (
     <div className={`formContainer ${theme}`}>
       <div className="formWrapper">
-        <button className="theme" onClick={toggleTheme}>
-          <i className="fa-solid fa-moon"></i>
-        </button>
+        <Button />
         <span className="logo">
           Hii Chat <img src={Logo} alt="" />
         </span>

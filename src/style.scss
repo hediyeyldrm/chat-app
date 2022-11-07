@@ -196,39 +196,39 @@
 
       .user {
         display: flex;
+        font-size: 17px;
         gap: 10px;
       }
       img {
         background-color: #ddddf7;
-        height: 24px;
-        width: 24px;
+        height: 25px;
+        width: 25px;
         border-radius: 50%;
         object-fit: cover;
       }
-      .theme {
-        background-color: #9f7aa1;
-        color: #ddddf7;
-        font-size: 14px;
-        border: 1px solid #e2cce3;
-        cursor: pointer;
-        border-radius: 5px;
-        @include tablet {
-          position: absolute;
-          bottom: 30px;
-        }
-      }
 
       button {
-        background-color: #82807c;
-        color: #ddddf7;
-        font-size: 10px;
-        border: none;
+        // background-color: #82807c;
+        // color: #ddddf7;
+        // font-size: 15px;
+        // border: none;
+        // cursor: pointer;
+        // border-radius: 5px;
+        // margin-left: 250px;
+        // margin-right: 10px;
+        border-radius: 10px;
+        width: 30px;
+        height: 30px;
+        border: 2px solid #82807c;
         cursor: pointer;
-        border-radius: 5px;
         @include tablet {
           position: absolute;
           bottom: 10px;
         }
+      }
+      .fa-solid {
+        color: #4b4453;
+        font-size: 14px;
       }
     }
 
@@ -303,6 +303,21 @@
       img {
         height: 24px;
         cursor: pointer;
+      }
+
+      .theme {
+        margin-left: 250px;
+        margin-right: 20px;
+        border-radius: 10px;
+        width: 35px;
+        height: 35px;
+        border: 2px solid #82807c;
+        cursor: pointer;
+      }
+
+      .fa-solid {
+        color: #5e5568;
+        font-size: 20px;
       }
     }
 
