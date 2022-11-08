@@ -6,12 +6,15 @@ import "../style.scss";
 import { auth } from "../firebase";
 import { useContext } from "react";
 import { themeContext } from "../context/ThemeContext";
-import Button from "../Components/Button";
+import ThemeButton from "../Components/ThemeButton";
+import { useTranslation } from "react-i18next";
+import LanguageButton from "../Components/LanguageButton";
 
 export default function Login() {
   const [err, setErr] = useState(false);
   const navigate = useNavigate();
   const { theme } = useContext(themeContext);
+  const { t } = useTranslation();
 
   const handleSubmit = async (e) => {
     // stop the refresh
@@ -30,19 +33,23 @@ export default function Login() {
   return (
     <div className={`formContainer ${theme}`}>
       <div className="formWrapper">
-        <Button />
+        <div className="buttonWrapper">
+          <ThemeButton />
+          <LanguageButton />
+        </div>
         <span className="logo">
           Hii Chat <img src={Logo} alt="" />
         </span>
-        <span className="title">Login</span>
+        <span className="title">{t("login")}</span>
         <form onSubmit={handleSubmit}>
           <input type="email" placeholder="Email"></input>
-          <input type="password" placeholder="Password"></input>
-          <button>Sign In</button>
-          {err && <span>Something went wrong</span>}
+          <input type="password" placeholder={t("password")}></input>
+          <button>{t("sign_in")}</button>
+          {err && <span>{t("err")}</span>}
         </form>
         <p>
-          You don't have an account ? <Link to="/register">Register</Link>
+          {t("not_account")}
+          <Link to="/register">{t("register")}</Link>
         </p>
       </div>
     </div>

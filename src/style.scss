@@ -75,17 +75,35 @@
       width: 500px;
     }
 
-    .theme {
-      margin-left: 250px;
-      border-radius: 10px;
-      width: 35px;
-      height: 30px;
-      border: 2px solid #a7bcff;
-      cursor: pointer;
+    .buttonWrapper {
+      display: flex;
+      gap: 5px;
 
-      .fa-solid {
-        color: #5a189a;
-        font-size: 18px;
+      .theme {
+        margin-left: 220px;
+        border-radius: 10px;
+        width: 35px;
+        height: 30px;
+        border: 2px solid #a7bcff;
+        cursor: pointer;
+
+        .fa-solid {
+          color: #5a189a;
+          font-size: 18px;
+        }
+      }
+
+      .language {
+        border-radius: 10px;
+        width: 35px;
+        height: 30px;
+        border: 2px solid #a7bcff;
+        cursor: pointer;
+
+        .fa-solid {
+          color: #5a189a;
+          font-size: 16px;
+        }
       }
     }
 
@@ -294,6 +312,24 @@
       justify-content: space-between;
       padding: 10px;
       color: lightgray;
+
+      .userInfo {
+        display: flex;
+        gap: 13px;
+
+        img {
+          background-color: transparent;
+          height: 38px;
+          width: 38px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+
+        span {
+          align-items: center;
+          margin-top: 10px;
+        }
+      }
     }
 
     .chatIcons {
@@ -305,19 +341,38 @@
         cursor: pointer;
       }
 
-      .theme {
-        margin-left: 250px;
-        margin-right: 20px;
-        border-radius: 10px;
-        width: 35px;
-        height: 35px;
-        border: 2px solid #82807c;
-        cursor: pointer;
-      }
+      .buttonWrapper {
+        display: flex;
 
-      .fa-solid {
-        color: #5e5568;
-        font-size: 20px;
+        .theme {
+          margin-left: 240px;
+          margin-right: 10px;
+          border-radius: 10px;
+          width: 35px;
+          height: 35px;
+          border: 2px solid #82807c;
+          cursor: pointer;
+        }
+
+        .fa-solid {
+          color: #5e5568;
+          font-size: 20px;
+        }
+
+        .language {
+          // margin-left: 250px;
+          margin-right: 20px;
+          border-radius: 10px;
+          width: 36px;
+          height: 35px;
+          border: 2px solid #82807c;
+          cursor: pointer;
+
+          .fa-solid {
+            color: #5e5568;
+            font-size: 18px;
+          }
+        }
       }
     }
 

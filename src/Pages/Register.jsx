@@ -10,12 +10,15 @@ import { doc, setDoc } from "firebase/firestore";
 import { useNavigate, Link } from "react-router-dom";
 import { useContext } from "react";
 import { themeContext } from "../context/ThemeContext";
-import Button from "../Components/Button";
+import ThemeButton from "../Components/ThemeButton";
+import { useTranslation } from "react-i18next";
+import LanguageButton from "../Components/LanguageButton";
 
 export default function Register() {
   const [err, setErr] = useState(false);
   const navigate = useNavigate();
   const { theme } = useContext(themeContext);
+  const { t } = useTranslation();
 
   const handleSubmit = async (e) => {
     // stop the refresh
@@ -64,25 +67,29 @@ export default function Register() {
   return (
     <div className={`formContainer ${theme}`}>
       <div className="formWrapper">
-        <Button />
+        <div className="buttonWrapper">
+          <ThemeButton />
+          <LanguageButton />
+        </div>
         <span className="logo">
           Hii Chat <img src={Logo} alt="" />
         </span>
-        <span className="title">Register</span>
+        <span className="title">{t("register")}</span>
         <form onSubmit={handleSubmit}>
-          <input type="text" placeholder="Username" />
+          <input type="text" placeholder={t("user_name")} />
           <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Password" />
+          <input type="password" placeholder={t("password")} />
           <input style={{ display: "none" }} type="file" id="file" />
           <label htmlFor="file">
             <img src={Add} alt="" />
-            <span>Add an avatar</span>
+            <span>{t("add_an_avatar")}</span>
           </label>
-          <button>Sign Up</button>
-          {err && <span>Something went wrong</span>}
+          <button>{t("sign_up")}</button>
+          {err && <span>{t("err")}</span>}
         </form>
         <p>
-          You do have an account ? <Link to="/login">Login</Link>
+          {t("have_account")}
+          <Link to="/login">{t("login")}</Link>
         </p>
       </div>
     </div>

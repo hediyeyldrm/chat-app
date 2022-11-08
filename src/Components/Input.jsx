@@ -12,6 +12,7 @@ import {
 import { db, storage } from "../firebase";
 import { v4 as uuid } from "uuid";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
+import { useTranslation } from "react-i18next";
 
 export default function Input() {
   const [text, setText] = useState("");
@@ -19,6 +20,7 @@ export default function Input() {
 
   const { currentUser } = useContext(AuthContext);
   const { data } = useContext(ChatContext);
+  const { t } = useTranslation();
 
   const handleSend = async () => {
     if (img) {
@@ -76,7 +78,7 @@ export default function Input() {
     <div className="input">
       <input
         type="text"
-        placeholder="Type something..."
+        placeholder={t("placeholder_input")}
         onChange={(e) => setText(e.target.value)}
         value={text}
       />
@@ -90,7 +92,7 @@ export default function Input() {
         <label htmlFor="file">
           <img src={Img} alt="" />
         </label>
-        <button onClick={handleSend}>Send</button>
+        <button onClick={handleSend}>{t("send")}</button>
       </div>
     </div>
   );

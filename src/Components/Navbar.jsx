@@ -14,7 +14,7 @@ export default function Navbar() {
         <img src={currentUser.photoURL} alt="" />
         <span>{currentUser.displayName}</span>
         <button onClick={() => signOut(auth)}>
-          <i class="fa-solid fa-right-from-bracket"></i>
+          <i className="fa-solid fa-right-from-bracket"></i>
         </button>
       </div>
     </div>
