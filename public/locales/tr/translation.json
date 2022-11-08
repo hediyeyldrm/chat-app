@@ -1,0 +1,16 @@
+{
+  "send": "Gönder",
+  "placeholder_input": "Bir şeyler yaz...",
+  "search_error": "Kullanıcı bulunamadı!",
+  "placeholder_search": "Kullanıcı ara",
+  "login": "Giriş Yap",
+  "err": "Bir şeyler yanlış gitti!",
+  "not_account": "Hesabınız yok mu ?",
+  "register": "Kayıt Ol",
+  "user_name": "Kullanıcı adı",
+  "password": "Şifre",
+  "add_an_avatar": "Avatar ekle",
+  "have_account": "Bir hesabınız var mı ?",
+  "sign_in": "Giriş Yap",
+  "sign_up": "Kayıt Ol"
+}

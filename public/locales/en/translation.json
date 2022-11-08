@@ -1,0 +1,16 @@
+{
+  "send": "Send",
+  "placeholder_input": "Type something...",
+  "search_error": "User not found!",
+  "placeholder_search": "Find a user",
+  "login": "Login",
+  "err": "Something went wrong!",
+  "not_account": "You don't have an account ?",
+  "register": "Register",
+  "user_name": "Username",
+  "password": "Password",
+  "add_an_avatar": "Add an avatar",
+  "have_account": "You do have an account ?",
+  "sign_in": "Sign In",
+  "sign_up": "Sign Up"
+}
