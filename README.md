@@ -8,19 +8,19 @@
 
 ## `Screen`
 
-- Register Page
+- `Register Page`
 
 ![registerscreen](https://user-images.githubusercontent.com/49349272/201485808-36b8153b-0823-4e5b-afb4-751d0813fbc3.png)
 
-- Login Page
+- `Login Page`
 
 ![loginscreen](https://user-images.githubusercontent.com/49349272/201485895-5f26ee84-eb10-4094-b802-498d961870a2.png)
 
-- Home Page
+- `Home Page`
 
 ![homescreen](https://user-images.githubusercontent.com/49349272/201485966-58a599f9-f088-4e4f-884d-6d706b89bd71.png)
 ![homescreen2](https://user-images.githubusercontent.com/49349272/201485992-5341ef7b-e955-4386-a49d-37db627aa2a4.png)
 
-- 404 Page
+- `404 Page`
 
 ![404screen](https://user-images.githubusercontent.com/49349272/201485923-ff547796-29ac-4d6d-8d78-69d994ca9417.png)
